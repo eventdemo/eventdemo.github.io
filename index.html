@@ -80,6 +80,8 @@
   p{color:var(--muted); font-size:1.02rem; margin-bottom:16px;}
   p.lead{color:var(--text); font-size:1.12rem;}
   strong.hl{color:var(--teal); font-weight:600;}
+  a.inline-link{color:var(--teal); text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(94,234,212,0.4);}
+  a.inline-link:hover, a.inline-link:focus{text-decoration-color:var(--teal);}
 
   .speaker-name{
     font-family:var(--display); font-size:clamp(1.5rem,3vw,2rem); font-weight:700; margin-bottom:6px;
@@ -97,6 +99,20 @@
   }
   @keyframes shine{ to{ background-position:-220% 0; } }
   .speaker-role{font-family:var(--mono); font-size:13px; color:var(--muted); margin-bottom:18px;}
+
+  .framework-chip{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:12px; letter-spacing:0.03em;
+    color:var(--text); text-decoration:none;
+    padding:9px 16px; border:1px solid var(--line); border-radius:999px;
+    margin-bottom:22px; margin-top:4px;
+    transition:border-color .25s ease, background .25s ease, transform .25s ease;
+  }
+  .framework-chip .arrow{color:var(--amber); transition:transform .25s ease;}
+  .framework-chip:hover, .framework-chip:focus{
+    border-color:var(--teal); background:rgba(94,234,212,0.06); transform:translateY(-1px);
+  }
+  .framework-chip:hover .arrow, .framework-chip:focus .arrow{ transform:translateX(3px); }
 
   .cta{padding-top:100px; padding-bottom:80px;}
   .btn{
@@ -160,7 +176,7 @@
 
 <main>
   <div class="quote-pin">
-    <p class="quote-text" id="quote-text">Evenimentul își propune să creeze un dialog între mediul academic și industria IT. Participarea lui Dr. Werner Vogels, CTO al AWS, oferă comunității tehnice din România o oportunitate rară de a învăța și de a interacționa direct cu unul dintre pionierii cloud computing-ului modern.</p>
+    <p class="quote-text" id="quote-text">One of the world's most influential technology leaders. One conversation with Romania.</p>
   </div>
 
   <section id="speaker">
@@ -168,7 +184,11 @@
       <span class="label">Keynote Speaker</span>
       <div class="speaker-name"><a href="https://en.wikipedia.org/wiki/Werner_Vogels" target="_blank" rel="noopener noreferrer">Dr. Werner Vogels</a></div>
       <div class="speaker-role">Chief Technology Officer, Amazon Web Services</div>
+      <a class="framework-chip" href="https://thefrugalarchitect.com/" target="_blank" rel="noopener noreferrer">
+        The Frugal Architect — cele 7 legi <span class="arrow">→</span>
+      </a>
       <p>Unul dintre <strong class="hl">pionierii cloud computing-ului modern</strong>, Dr. Werner Vogels a modelat modul în care sistemele distribuite la scară globală sunt proiectate și operate astăzi. Vizita sa la Politehnica București aduce comunității tehnice românești o oportunitate rară de interacțiune directă cu unul dintre liderii care au influențat evoluția infrastructurii digitale la nivel mondial.</p>
+      <p>Prin <a class="inline-link" href="https://thefrugalarchitect.com/" target="_blank" rel="noopener noreferrer">The Frugal Architect</a>, cadrul său de gândire despre eficiența costurilor în arhitecturile la scară, Vogels propune un set de legi prin care echipele de inginerie pot lua decizii tehnice care sunt în același timp performante și sustenabile financiar — un subiect central pentru discuția de la Politehnica.</p>
     </div>
   </section>
 
