@@ -89,18 +89,11 @@
     background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
     animation:shine 6s linear infinite;
   }
-  .speaker-name a{
-    color: inherit;
-    text-decoration: none;
-  }
-  .speaker-name a:hover,
-  .speaker-name a:focus{
-    text-decoration: underline;
-  }
   @keyframes shine{ to{ background-position:-220% 0; } }
   .speaker-role{font-family:var(--mono); font-size:13px; color:var(--muted); margin-bottom:18px;}
 
-  .framework-chip{
+  .framework-chip,
+  .wiki-chip{
     display:inline-flex; align-items:center; gap:8px;
     font-family:var(--mono); font-size:12px; letter-spacing:0.03em;
     color:var(--text); text-decoration:none;
@@ -108,11 +101,14 @@
     margin-bottom:22px; margin-top:4px;
     transition:border-color .25s ease, background .25s ease, transform .25s ease;
   }
-  .framework-chip .arrow{color:var(--amber); transition:transform .25s ease;}
-  .framework-chip:hover, .framework-chip:focus{
+  .framework-chip .arrow,
+  .wiki-chip .arrow{color:var(--amber); transition:transform .25s ease;}
+  .framework-chip:hover, .framework-chip:focus,
+  .wiki-chip:hover, .wiki-chip:focus{
     border-color:var(--teal); background:rgba(94,234,212,0.06); transform:translateY(-1px);
   }
-  .framework-chip:hover .arrow, .framework-chip:focus .arrow{ transform:translateX(3px); }
+  .framework-chip:hover .arrow, .framework-chip:focus .arrow,
+  .wiki-chip:hover .arrow, .wiki-chip:focus .arrow{ transform:translateX(3px); }
 
   .cta{padding-top:100px; padding-bottom:80px;}
   .btn{
@@ -182,10 +178,13 @@
   <section id="speaker">
     <div class="wrap reveal">
       <span class="label">Keynote Speaker</span>
-      <div class="speaker-name"><a href="https://en.wikipedia.org/wiki/Werner_Vogels" target="_blank" rel="noopener noreferrer">Dr. Werner Vogels</a></div>
+      <div class="speaker-name">Dr. Werner Vogels</div>
       <div class="speaker-role">Chief Technology Officer, Amazon Web Services</div>
       <a class="framework-chip" href="https://thefrugalarchitect.com/" target="_blank" rel="noopener noreferrer">
         The Frugal Architect — cele 7 legi <span class="arrow">→</span>
+      </a>
+      <a class="wiki-chip" href="https://en.wikipedia.org/wiki/Werner_Vogels" target="_blank" rel="noopener noreferrer">
+        20+ ani la Amazon <span class="arrow">→</span>
       </a>
       <p>Unul dintre <strong class="hl">pionierii cloud computing-ului modern</strong>, Dr. Werner Vogels a modelat modul în care sistemele distribuite la scară globală sunt proiectate și operate astăzi.</p>
       <p>Prin <a class="inline-link" href="https://thefrugalarchitect.com/" target="_blank" rel="noopener noreferrer">The Frugal Architect</a>, cadrul său de gândire despre eficiența costurilor în arhitecturile la scară, Vogels propune un set de legi prin care echipele de inginerie pot lua decizii tehnice care sunt în același timp performante și sustenabile financiar.</p>
